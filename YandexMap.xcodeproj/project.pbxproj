@@ -13,9 +13,11 @@
 		A933D9A12606334A006C1ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933D99F2606334A006C1ECE /* Main.storyboard */; };
 		A933D9A32606334C006C1ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A22606334C006C1ECE /* Assets.xcassets */; };
 		A933D9A62606334C006C1ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A42606334C006C1ECE /* LaunchScreen.storyboard */; };
+		E20E4C10EEF1C6B7444C7527 /* Pods_YandexMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		825AA7601D22B6DBF6002AC0 /* Pods-YandexMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMap.release.xcconfig"; path = "Target Support Files/Pods-YandexMap/Pods-YandexMap.release.xcconfig"; sourceTree = "<group>"; };
 		A933D9962606334A006C1ECE /* YandexMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YandexMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A933D9992606334A006C1ECE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A933D99B2606334A006C1ECE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		A933D9A22606334C006C1ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A933D9A52606334C006C1ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A933D9A72606334C006C1ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMap.debug.xcconfig"; path = "Target Support Files/Pods-YandexMap/Pods-YandexMap.debug.xcconfig"; sourceTree = "<group>"; };
+		D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E20E4C10EEF1C6B7444C7527 /* Pods_YandexMap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3BAB44F03F053C95816DBE33 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77575519A5D0A7292D091250 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */,
+				825AA7601D22B6DBF6002AC0 /* Pods-YandexMap.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A933D98D2606334A006C1ECE = {
 			isa = PBXGroup;
 			children = (
 				A933D9982606334A006C1ECE /* YandexMap */,
 				A933D9972606334A006C1ECE /* Products */,
+				77575519A5D0A7292D091250 /* Pods */,
+				3BAB44F03F053C95816DBE33 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A933D9AA2606334C006C1ECE /* Build configuration list for PBXNativeTarget "YandexMap" */;
 			buildPhases = (
+				04DA09DCDD1B0DEDE8965915 /* [CP] Check Pods Manifest.lock */,
 				A933D9922606334A006C1ECE /* Sources */,
 				A933D9932606334A006C1ECE /* Frameworks */,
 				A933D9942606334A006C1ECE /* Resources */,
+				36FE68BD9AB1122778839E72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04DA09DCDD1B0DEDE8965915 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YandexMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		36FE68BD9AB1122778839E72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A933D9922606334A006C1ECE /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		A933D9AB2606334C006C1ECE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		A933D9AC2606334C006C1ECE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 825AA7601D22B6DBF6002AC0 /* Pods-YandexMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
