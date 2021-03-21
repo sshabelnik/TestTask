@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		A933D9A12606334A006C1ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933D99F2606334A006C1ECE /* Main.storyboard */; };
 		A933D9A32606334C006C1ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A22606334C006C1ECE /* Assets.xcassets */; };
 		A933D9A62606334C006C1ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A42606334C006C1ECE /* LaunchScreen.storyboard */; };
+		A933D9C32607F741006C1ECE /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933D9C22607F741006C1ECE /* Field.swift */; };
 		E20E4C10EEF1C6B7444C7527 /* Pods_YandexMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		A933D9A22606334C006C1ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A933D9A52606334C006C1ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A933D9A72606334C006C1ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A933D9C22607F741006C1ECE /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMap.debug.xcconfig"; path = "Target Support Files/Pods-YandexMap/Pods-YandexMap.debug.xcconfig"; sourceTree = "<group>"; };
 		D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -56,7 +58,6 @@
 				AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */,
 				825AA7601D22B6DBF6002AC0 /* Pods-YandexMap.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				A933D9A22606334C006C1ECE /* Assets.xcassets */,
 				A933D9A42606334C006C1ECE /* LaunchScreen.storyboard */,
 				A933D9A72606334C006C1ECE /* Info.plist */,
+				A933D9C22607F741006C1ECE /* Field.swift */,
 			);
 			path = YandexMap;
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 			files = (
 				A933D99E2606334A006C1ECE /* ViewController.swift in Sources */,
 				A933D99A2606334A006C1ECE /* AppDelegate.swift in Sources */,
+				A933D9C32607F741006C1ECE /* Field.swift in Sources */,
 				A933D99C2606334A006C1ECE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
