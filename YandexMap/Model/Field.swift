@@ -9,6 +9,7 @@ import Foundation
 import YandexMapsMobile
 
 struct Field {
+    let id: String
     let name: String
-    let points: [YMKPoint]
+    let points: [[Double]]
 }

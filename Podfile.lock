@@ -1,16 +1,20 @@
 PODS:
+  - NBBottomSheet (1.2.0)
   - YandexMapsMobile (4.0.0-lite)
 
 DEPENDENCIES:
+  - NBBottomSheet (~> 1.2)
   - YandexMapsMobile (= 4.0.0-lite)
 
 SPEC REPOS:
   trunk:
+    - NBBottomSheet
     - YandexMapsMobile
 
 SPEC CHECKSUMS:
+  NBBottomSheet: aa7a52809b2d7b193f733247b8ce391a59904372
   YandexMapsMobile: d7d7f3b452209b4c2787beb53bb2dfcea259c70c
 
-PODFILE CHECKSUM: 5e9e7f7bf4b363cae161aebd8e5aa4362814e583
+PODFILE CHECKSUM: 7f0e5ea1cf9be1c1351059b7f96b40aaaf85c4d8
 
 COCOAPODS: 1.10.0

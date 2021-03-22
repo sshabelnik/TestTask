@@ -14,6 +14,9 @@
 		A933D9A32606334C006C1ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A22606334C006C1ECE /* Assets.xcassets */; };
 		A933D9A62606334C006C1ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A933D9A42606334C006C1ECE /* LaunchScreen.storyboard */; };
 		A933D9C32607F741006C1ECE /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933D9C22607F741006C1ECE /* Field.swift */; };
+		A933D9CE2608C58A006C1ECE /* YandexMapDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A933D9CC2608C589006C1ECE /* YandexMapDataModel.xcdatamodeld */; };
+		A933D9D12608C656006C1ECE /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933D9D02608C656006C1ECE /* LocalDataManager.swift */; };
+		A933D9D42608CC80006C1ECE /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933D9D32608CC80006C1ECE /* TableViewController.swift */; };
 		E20E4C10EEF1C6B7444C7527 /* Pods_YandexMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +31,9 @@
 		A933D9A52606334C006C1ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A933D9A72606334C006C1ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A933D9C22607F741006C1ECE /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		A933D9CD2608C589006C1ECE /* YandexMapDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YandexMapDataModel.xcdatamodel; sourceTree = "<group>"; };
+		A933D9D02608C656006C1ECE /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		A933D9D32608CC80006C1ECE /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		AB3F1D42050D78C836EE0448 /* Pods-YandexMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YandexMap.debug.xcconfig"; path = "Target Support Files/Pods-YandexMap/Pods-YandexMap.debug.xcconfig"; sourceTree = "<group>"; };
 		D5260BF675D67092BCE0936B /* Pods_YandexMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YandexMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -84,14 +90,41 @@
 			children = (
 				A933D9992606334A006C1ECE /* AppDelegate.swift */,
 				A933D99B2606334A006C1ECE /* SceneDelegate.swift */,
-				A933D99D2606334A006C1ECE /* ViewController.swift */,
+				A933D9E02608D957006C1ECE /* Model */,
+				A933D9E22608D966006C1ECE /* View */,
+				A933D9E42608D985006C1ECE /* Services */,
 				A933D99F2606334A006C1ECE /* Main.storyboard */,
 				A933D9A22606334C006C1ECE /* Assets.xcassets */,
 				A933D9A42606334C006C1ECE /* LaunchScreen.storyboard */,
 				A933D9A72606334C006C1ECE /* Info.plist */,
-				A933D9C22607F741006C1ECE /* Field.swift */,
+				A933D9CC2608C589006C1ECE /* YandexMapDataModel.xcdatamodeld */,
 			);
 			path = YandexMap;
+			sourceTree = "<group>";
+		};
+		A933D9E02608D957006C1ECE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A933D9C22607F741006C1ECE /* Field.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A933D9E22608D966006C1ECE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A933D99D2606334A006C1ECE /* ViewController.swift */,
+				A933D9D32608CC80006C1ECE /* TableViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A933D9E42608D985006C1ECE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A933D9D02608C656006C1ECE /* LocalDataManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,6 +139,7 @@
 				A933D9932606334A006C1ECE /* Frameworks */,
 				A933D9942606334A006C1ECE /* Resources */,
 				36FE68BD9AB1122778839E72 /* [CP] Copy Pods Resources */,
+				F5B3E3381C973409A283BDC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +235,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F5B3E3381C973409A283BDC4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YandexMap/Pods-YandexMap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -208,10 +259,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A933D9CE2608C58A006C1ECE /* YandexMapDataModel.xcdatamodeld in Sources */,
+				A933D9D42608CC80006C1ECE /* TableViewController.swift in Sources */,
 				A933D99E2606334A006C1ECE /* ViewController.swift in Sources */,
 				A933D99A2606334A006C1ECE /* AppDelegate.swift in Sources */,
 				A933D9C32607F741006C1ECE /* Field.swift in Sources */,
 				A933D99C2606334A006C1ECE /* SceneDelegate.swift in Sources */,
+				A933D9D12608C656006C1ECE /* LocalDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +469,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A933D9CC2608C589006C1ECE /* YandexMapDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A933D9CD2608C589006C1ECE /* YandexMapDataModel.xcdatamodel */,
+			);
+			currentVersion = A933D9CD2608C589006C1ECE /* YandexMapDataModel.xcdatamodel */;
+			path = YandexMapDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A933D98E2606334A006C1ECE /* Project object */;
 }
