@@ -1,20 +1,20 @@
 PODS:
-  - NBBottomSheet (1.2.0)
+  - PresenterKit (6.1.1)
   - YandexMapsMobile (4.0.0-lite)
 
 DEPENDENCIES:
-  - NBBottomSheet (~> 1.2)
+  - PresenterKit (~> 6.1.0)
   - YandexMapsMobile (= 4.0.0-lite)
 
 SPEC REPOS:
   trunk:
-    - NBBottomSheet
+    - PresenterKit
     - YandexMapsMobile
 
 SPEC CHECKSUMS:
-  NBBottomSheet: aa7a52809b2d7b193f733247b8ce391a59904372
+  PresenterKit: f7d275fa9e1fe01b84da7be0a6630ec2728ab409
   YandexMapsMobile: d7d7f3b452209b4c2787beb53bb2dfcea259c70c
 
-PODFILE CHECKSUM: 7f0e5ea1cf9be1c1351059b7f96b40aaaf85c4d8
+PODFILE CHECKSUM: 957488691adb0a8ecb41b0e45b7135b23bdc910d
 
 COCOAPODS: 1.10.0

@@ -7,5 +7,5 @@ target 'YandexMap' do
 
   # Pods for YandexMap
   pod 'YandexMapsMobile', '4.0.0-lite'
-  pod 'NBBottomSheet', '~> 1.2'
+  pod 'PresenterKit', '~> 6.1.0'
 end

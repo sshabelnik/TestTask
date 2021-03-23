@@ -7,13 +7,13 @@
 
 import UIKit
 import YandexMapsMobile
-import NBBottomSheet
+import PresenterKit
 
 protocol ViewControllerDelegate: AnyObject {
     func reloadMapObjects()
 }
 
-class ViewController: UIViewController, YMKMapInputListener {
+class ViewController: UIViewController, YMKMapInputListener, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var mapView: YMKMapView!
     
@@ -52,9 +52,14 @@ class ViewController: UIViewController, YMKMapInputListener {
     @IBAction func listOfFieldsButtonPressed(_ sender: Any) {
         let viewController = TableViewController()
         viewController.delegate = self
-        let configuration = NBBottomSheetConfiguration(animationDuration: 0, sheetSize: .fixed(300), backgroundViewColor: .clear)
-        let bottomSheetController = NBBottomSheetController(configuration: configuration)
-        bottomSheetController.present(viewController, on: self)
+        viewController.modalTransitionStyle = .coverVertical
+        presentController(viewController, type: .custom(self), animated: true)
+    }
+    
+    func presentationController(forPresented presented: UIViewController,
+                                presenting: UIViewController?,
+                                source: UIViewController) -> UIPresentationController? {
+        HalfModalPresentationController(presentedViewController: presented, presenting: presenting)
     }
     
     func setNavigationButtons() {
