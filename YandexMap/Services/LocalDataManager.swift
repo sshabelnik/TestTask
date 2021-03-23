@@ -13,7 +13,6 @@ class LocalDataManager {
     public static let shared = LocalDataManager()
     
     func savePolygon(id: String, name: String, points: [[Double]]) {
-        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         
         let managedContext = appDelegate.persistentContainer.viewContext

@@ -12,8 +12,10 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
+    let MAPKIT_API_KEY = "d404c5e4-aa33-49d4-960e-be162cf74862"
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        YMKMapKit.setApiKey("d404c5e4-aa33-49d4-960e-be162cf74862")
+        YMKMapKit.setApiKey(MAPKIT_API_KEY)
         return true
     }
     

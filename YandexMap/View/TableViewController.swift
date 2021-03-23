@@ -10,12 +10,18 @@ import YandexMapsMobile
 
 class TableViewController: UITableViewController {
     
+    // MARK: - Properties
     var fields: [Field]? = []
     
     var delegate: ViewControllerDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getFields()
+    }
+    
+    // MARK: - LocalDataManager
+    func getFields() {
         LocalDataManager.shared.getAllPolygons(completion: { (response) in
             switch response {
             case .failure(let error):
@@ -37,7 +43,6 @@ class TableViewController: UITableViewController {
         return fields?.count ?? 0
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         guard let field = fields?[indexPath.row] else { return cell }
@@ -55,6 +60,14 @@ class TableViewController: UITableViewController {
             fields?.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
             delegate.reloadMapObjects()
+            dismiss(animated: true, completion: nil)
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        delegate.moveCameraTo(field: fields![indexPath.row])
+        delegate.highLightField(field: fields![indexPath.row])
+        dismiss(animated: true, completion: nil)
     }
 }
